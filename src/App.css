@@ -1,6 +1,7 @@
 :root {
   --main-margin-side: 20px;
   --main-bg-color: #fff;
+  --main-border: #444;
   --tile-bg-color: #d5d5d5;
   --tile-shadow-color: #acacac;
   --button-active-color: #ddd;
@@ -19,7 +20,7 @@
 .main {
   max-width: 570px;
   width: 95%;
-  border: solid #444 2px;
+  border: solid var(--main-border) 2px;
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -50,9 +51,17 @@ h1.searchHeader {
   display: flex;
   justify-content: space-between;
 }
-.flex {
+.flexLeft {
   display: flex;
+  flex-direction: row;
+  justify-content: start;
 }
+.flexRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
 .resultsContainer {
   display: flex;
   flex-direction: row;
@@ -78,6 +87,11 @@ h1.searchHeader {
   color: #333;
 }
 
+.fa-regular {
+  margin: 10px;
+  color: var(--main-dark-gray);
+}
+
 .iconBand {
   margin-top: 20px;
 }
@@ -85,10 +99,6 @@ h1.searchHeader {
   padding-top: 8px;
   font-size: 13px;
   font-weight: bold;
-}
-.fa-regular {
-  margin: 10px;
-  color: var(--main-dark-gray);
 }
 .iconBand button {
   background: var(--main-bg-color);
@@ -106,3 +116,8 @@ h1.searchHeader {
   visibility: hidden;
 }
 
+@media screen and (max-width: 400px) {
+  .iconBand {
+    flex-direction: column;
+  }
+}

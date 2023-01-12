@@ -1,12 +1,31 @@
+# Notes for FULLL challenge
 Webpage that searches github to find users with certain text in profiles
-Did a few tests, but in my last company, we did tests only for business logic. 
+TESTS: Did a few tests, but in my last company, we did tests only for business logic. 
 Other tests were handled by QA
 
+## Main components:
+* Header
+* SearchBox (input text for searching)
+    - requires RETURN to submit to limit search requests
+    - searches in more fields than just name
+* IconBand (handles checkall, edit, duplicate, delete)
+    - can checkall, duplicate, delete and toggle edit mode
+* Results container which shows either 'No results' or All tiles
+    - Tiles - is grid of individual tiles, using flex to display
+    - Tile - is one tile
 
 
+## CSS
+- used some BEM naming
+- App.css has styles for general usage and also some components, but if one component has many styles, it has a .css file of its own
+- created some variables for reused colors -- should probably include all colors
+- Responsive (using both flex and media queries)
 
+## Other
+- used fontawesome
+-------------------------------------------- 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

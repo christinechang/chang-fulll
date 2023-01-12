@@ -22,13 +22,13 @@ const IconBand = ({
   const colorIcon = checkAll ? { background: "#00a1ff" } : {};
   return (
     <div className="flexSpaceBetween iconBand" data-testid="iconBand">
-      <div className={`flexSpaceBetween ${editMode ? '' : 'hideNoEdit'}`}>
+      <div className={`flexLeft ${editMode ? '' : 'hideNoEdit'}`}>
         <button onClick={handleCheckAll} data-testid="checkAll">
           <i className={`fa-regular fa-square-minus`} style={colorIcon}></i>
         </button>
         <span className="iconBand__text">{checkCount} elements selected</span>
       </div>
-      <div className="flexSpaceBetween">
+      <div className="flexRight">
         <button onClick={handleDupe} className={editMode ? '' : 'hideNoEdit'}>
           <i className="fa-regular fa-clone"></i>
         </button>

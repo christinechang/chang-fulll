@@ -1,3 +1,11 @@
+Webpage that searches github to find users with certain text in profiles
+Did a few tests, but in my last company, we did tests only for business logic. 
+Other tests were handled by QA
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

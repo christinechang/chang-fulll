@@ -1,38 +1,108 @@
+:root {
+  --main-margin-side: 20px;
+  --main-bg-color: #fff;
+  --tile-bg-color: #d5d5d5;
+  --tile-shadow-color: #acacac;
+  --button-active-color: #ddd;
+  --button-hover-color: #eee;
+  --accent-blue: #00a1ff;
+  --main-dark-gray: #929292;
+  --main-med-gray: #d5d5d5;
+}
 .App {
   text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  max-width: 570px;
+  width: 95%;
+  border: solid #444 2px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 20px;
+}
+
+.searchHeader {
+  width: 100%;
+  height: 64px;
+  background-color: var(--main-dark-gray);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+h1.searchHeader {
+  font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.flexCentered {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+.flex {
+  display: flex;
+}
+.resultsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchInput {
+  background-color: var(--main-med-gray);
+  width: 300px;
+  max-width: 95%;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
 }
+.searchInput::placeholder,
+.searchInput:-ms-input-placeholder,
+.searchInput::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #333;
+}
+
+.iconBand {
+  margin-top: 20px;
+}
+.iconBand__text {
+  padding-top: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.fa-regular {
+  margin: 10px;
+  color: var(--main-dark-gray);
+}
+.iconBand button {
+  background: var(--main-bg-color);
+  border: none;
+  border-radius: 3px;
+}
+.iconBand button:active {
+  background: var(--button-active-color);
+  border: grey 1px solid;
+}
+.iconBand button:hover {
+  background: var(--button-hover-color);
+}
+.hideNoEdit {
+  visibility: hidden;
+}
+

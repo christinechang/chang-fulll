@@ -1,0 +1,57 @@
+/* CHECK BOX ****************** */
+.checkContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* hide default checkbox */
+  .checkContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 10px;
+    width: 10px;
+    border: black 2px solid;
+    border-radius: 3px;
+  }
+  /* blue background when checked*/
+  .checkContainer input:checked ~ .checkmark {
+    background-color: #00a1ff;
+  }
+  /* checkmark */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* checkmark shown when checked */
+  .checkContainer input:checked ~ .checkmark:after {
+    display: block;
+  }
+  /* The check itself */
+  .checkContainer .checkmark:after {
+    left: 2px;
+    top: -2px;
+    width: 3px;
+    height: 8px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

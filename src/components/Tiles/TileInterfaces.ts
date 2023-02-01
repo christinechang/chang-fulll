@@ -6,18 +6,20 @@ export interface TileType {
   id: number;
   login: string | null;
   url: string | undefined;
-  check: boolean;
   editMode: boolean;
 }
 
 export interface TileProps {
   tileInfo: TileType;
+  checkbox: boolean;
   handleCheck: Function;
   idx: number;
   editMode: boolean;
 }
 export interface TilesProps {
   tileList: TileType[];
+  checkboxes: boolean[];
   handleCheck: Function;
   editMode: boolean;
 }
+

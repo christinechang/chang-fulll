@@ -1,13 +1,13 @@
 import { ReactElement } from "react";
 import "./Checkbox.css";
 
-interface CheckboxType {
+interface CheckboxPropsType {
   handleCheck: Function;
   checked: boolean;
   editMode: boolean;
 }
 
-const Checkbox = ({ handleCheck, checked, editMode }: CheckboxType): ReactElement => {
+const Checkbox = ({ handleCheck, checked=false, editMode }: CheckboxPropsType): ReactElement => {
   return (
     <label className={`checkContainer ${editMode ? '' : 'hideNoEdit'}`} data-testid="checkbox">
       <input
